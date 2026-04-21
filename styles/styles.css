@@ -110,7 +110,7 @@ body{
 
 .navbar__list {
     display: flex;
-    padding: 6px 0;
+    flex-direction: column;
     width: 100%;
     margin: 0 auto;
     list-style: none;
@@ -122,7 +122,7 @@ body{
     align-items: center;
     text-decoration: none;
     color: var(--white);
-    padding: 4px 0;
+
 }
 
 @media (width > 768px) {
@@ -135,10 +135,19 @@ body{
         flex-direction: row;
         gap: 40px;
         justify-content: space-evenly;
+        align-items: center;
 }
 
 .navbar__list:hover {
     color: var(--secundary-300);
+}
+
+.navbar__link.active {
+    background-color: var(--white);
+    color: var(--primary-950);
+    font-weight: bold;
+    padding: 8px 24px;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 
@@ -149,3 +158,5 @@ body{
 .header {
     position: static;
 }
+
+
